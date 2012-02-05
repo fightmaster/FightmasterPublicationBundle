@@ -1,0 +1,6 @@
+vendor/symfony
+vendor/doctrine
+vendor/doctrine-common
+vendor/doctrine-dbal
+phpunit.xml
+Tests/autoload.php

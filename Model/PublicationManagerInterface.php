@@ -33,7 +33,7 @@ interface PublicationManagerInterface
      *
      * @param PublicationInterface $publication
      */
-    public function addPublication(PublicationInterface $publication);
+    public function savePublication(PublicationInterface $publication);
 
     /**
      * Creates an empty publication instance.

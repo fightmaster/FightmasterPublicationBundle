@@ -1,6 +1,6 @@
 <?php
 
-namespace SarSport\PublicationBundle\Model;
+namespace Fightmaster\PublicationBundle\Model;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 

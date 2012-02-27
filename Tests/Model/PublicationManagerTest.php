@@ -1,14 +1,14 @@
 <?php
 
-namespace SarSport\PublicationBundle\Tests\Model;
+namespace Fightmaster\PublicationBundle\Tests\Model;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
  *
- * @group SarSport_Publication
- * @group SarSport_Manager
+ * @group Fightmaster_Publication
+ * @group Fightmaster_Manager
  */
 class PublicationManagerTest extends PHPUnit_Framework_TestCase
 {
@@ -24,7 +24,7 @@ class PublicationManagerTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->uut = $this->getMockForAbstractClass('SarSport\PublicationBundle\Model\PublicationManager');
+        $this->uut = $this->getMockForAbstractClass('Fightmaster\PublicationBundle\Model\PublicationManager');
     }
 
     protected function tearDown()

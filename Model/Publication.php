@@ -1,6 +1,6 @@
 <?php
 
-namespace SarSport\PublicationBundle\Model;
+namespace Fightmaster\PublicationBundle\Model;
 
 use DateTime;
 
@@ -232,7 +232,7 @@ abstract class Publication implements PublicationInterface
      */
     public function getAuthorName()
     {
-        return 'SarSport.publication.author.name';
+        return 'Fightmaster.publication.author.name';
     }
 
 }

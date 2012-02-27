@@ -1,6 +1,6 @@
 <?php
 
-namespace SarSport\PublicationBundle\Tests\Model;
+namespace Fightmaster\PublicationBundle\Tests\Model;
 
 use PHPUnit_Framework_TestCase;
 use DateTime;
@@ -8,13 +8,13 @@ use DateTime;
 /**
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
  *
- * @group SarSport_Publication
+ * @group Fightmaster_Publication
  * @group SarSPort_Model
  */
 class PublicationTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var \PHPUnit_Framework_MockObject_MockObject|\SarSport\PublicationBundle\Model\Publication
+     * @var \PHPUnit_Framework_MockObject_MockObject|\Fightmaster\PublicationBundle\Model\Publication
      */
     protected $uut;
 
@@ -28,7 +28,7 @@ class PublicationTest extends PHPUnit_Framework_TestCase
             ->setSlug('Slug1')
             ->setTitle('Title1')
             ->setUpdatedAt($time2);
-        $this->assertEquals('SarSport.publication.author.name', $this->uut->getAuthorName());
+        $this->assertEquals('Fightmaster.publication.author.name', $this->uut->getAuthorName());
         $this->assertEquals('Text Text', $this->uut->getBody());
         $this->assertEquals($time1, $this->uut->getCreatedAt());
         $this->assertEquals('Preview1', $this->uut->getPreview());
@@ -40,7 +40,7 @@ class PublicationTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->uut = $this->getMockForAbstractClass('SarSport\PublicationBundle\Model\Publication');
+        $this->uut = $this->getMockForAbstractClass('Fightmaster\PublicationBundle\Model\Publication');
     }
 
     protected function tearDown()

@@ -1,6 +1,6 @@
 <?php
 
-namespace SarSport\PublicationBundle\Event;
+namespace Fightmaster\PublicationBundle\Event;
 
 /**
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>

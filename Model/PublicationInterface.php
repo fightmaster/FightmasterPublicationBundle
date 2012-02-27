@@ -1,13 +1,13 @@
 <?php
 
-namespace SarSport\PublicationBundle\Model;
+namespace Fightmaster\PublicationBundle\Model;
 
 use DateTime;
 
 /**
  * Publication interface
  *
- * Any publication resource to be used by SarSport\PublicationBundle must implement this interface.
+ * Any publication resource to be used by Fightmaster\PublicationBundle must implement this interface.
  *
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
  */

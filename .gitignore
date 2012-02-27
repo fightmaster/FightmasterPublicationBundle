@@ -2,6 +2,8 @@ vendor/symfony
 vendor/doctrine
 vendor/doctrine-common
 vendor/doctrine-dbal
-vendor/mongodb-odm/
+vendor/doctrine-mongodb-odm
+vendor/doctrine-mongodb
+vendor/sldao
 phpunit.xml
 Tests/autoload.php

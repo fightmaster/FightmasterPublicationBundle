@@ -1,8 +1,8 @@
 <?php
 
-namespace SarSport\PublicationBundle\Entity;
+namespace Fightmaster\PublicationBundle\Entity;
 
-use SarSport\PublicationBundle\Model\Publication as BasePublication;
+use Fightmaster\PublicationBundle\Model\Publication as BasePublication;
 
 /**
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>

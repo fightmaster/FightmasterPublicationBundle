@@ -1,11 +1,11 @@
 <?php
 
-namespace SarSport\PublicationBundle;
+namespace Fightmaster\PublicationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class SarSportPublicationBundle extends Bundle
+class FightmasterPublicationBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

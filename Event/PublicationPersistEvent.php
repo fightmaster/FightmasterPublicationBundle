@@ -1,8 +1,8 @@
 <?php
 
-namespace SarSport\PublicationBundle\Event;
+namespace Fightmaster\PublicationBundle\Event;
 
-use SarSport\PublicationBundle\Model\PublicationInterface;
+use Fightmaster\PublicationBundle\Model\PublicationInterface;
 
 /**
  * An event related to a persisting event that can be

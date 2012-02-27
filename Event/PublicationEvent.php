@@ -1,9 +1,9 @@
 <?php
 
-namespace SarSport\PublicationBundle\Event;
+namespace Fightmaster\PublicationBundle\Event;
 
 use Symfony\Component\EventDispatcher\Event;
-use SarSport\PublicationBundle\Model\PublicationInterface;
+use Fightmaster\PublicationBundle\Model\PublicationInterface;
 
 /**
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
@@ -11,7 +11,7 @@ use SarSport\PublicationBundle\Model\PublicationInterface;
 class PublicationEvent extends Event
 {
     /**
-     * @var \SarSport\PublicationBundle\Model\PublicationInterface
+     * @var \Fightmaster\PublicationBundle\Model\PublicationInterface
      */
     private $publication;
 

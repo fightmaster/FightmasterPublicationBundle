@@ -3,7 +3,7 @@
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
  */
 
-namespace SarSport\PublicationBundle;
+namespace Fightmaster\PublicationBundle;
 
 /**
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
@@ -16,7 +16,7 @@ final class Events
      *
      * This event allows you to modify the data in the publication prior
      * to persisting occuring. The listener receives a
-     * SarSport\PublicationBundle\Event\PublicationPersistEvent instance.
+     * Fightmaster\PublicationBundle\Event\PublicationPersistEvent instance.
      *
      * Persisting of the publication can be aborted by calling
      * $event->abortPersist()
@@ -32,7 +32,7 @@ final class Events
      * This event allows you to notify users or perform other actions
      * that might require the publication to be persisted before performing
      * those actions. The listener receives a
-     * SarSport\PublicationBundle\Event\PublicationEvent instance.
+     * Fightmaster\PublicationBundle\Event\PublicationEvent instance.
      *
      * @var string
      */
@@ -42,7 +42,7 @@ final class Events
      * The CREATE event occurs when the manager is asked to create
      * a new instance of a publication.
      *
-     * The listener receives a SarSport\PublicationBundle\Event\PublicationEvent
+     * The listener receives a Fightmaster\PublicationBundle\Event\PublicationEvent
      * instance.
      *
      * @var string

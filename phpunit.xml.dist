@@ -2,7 +2,7 @@
 
 <phpunit bootstrap="./Tests/bootstrap.php" color="true">
     <testsuites>
-        <testsuite name="SarSportPublicationBundle">
+        <testsuite name="FightmasterPublicationBundle">
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>

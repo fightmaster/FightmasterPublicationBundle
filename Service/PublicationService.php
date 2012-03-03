@@ -1,32 +1,45 @@
 <?php
 
+/**
+ * This file is part of the FightmasterPublicationBundle package.
+ *
+ * (c) Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 
 namespace Fightmaster\PublicationBundle\Service;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Fightmaster\Model\Manager\ManagerInterface;
-use Fightmaster\Service\Service;
 use Fightmaster\PublicationBundle\Event\PublicationPersistEvent;
 use Fightmaster\PublicationBundle\Exception\PublicationException;
 
 /**
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
  */
-class PublicationService extends Service
+class PublicationService
 {
     /**
      * @var \Symfony\Component\EventDispatcher\EventDispatcherInterface
      */
     protected $dispatcher;
 
+    /**
+     * @var \Fightmaster\Model\Manager\ManagerInterface
+     */
+    protected $manager;
+
     public function __construct(EventDispatcherInterface $eventDispatcher, ManagerInterface $manager)
     {
-        parent::__construct($manager);
         $this->dispatcher = $eventDispatcher;
+        $this->manager = $manager;
     }
 
     /**
-     * {@inheritdoc}
+     * Saves publication entities
      *
      * @param $publication
      * @throws \Fightmaster\PublicationBundle\Exception\PublicationException
@@ -40,7 +53,7 @@ class PublicationService extends Service
             throw PublicationException::savingAbortedByPrePersistEvent();
         }
 
-        parent::save($publication);
+        $this->manager->save($publication, true);
 
         $event = new PublicationEvent($publication);
         $this->getDispatcher()->dispatch(Events::PUBLICATION_POST_PERSIST, $event);

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ This file is part of the FightmasterPublicationBundle package.
+
+ (c) Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
+
+ This source file is subject to the MIT license that is bundled
+ with this source code in the file LICENSE.
+-->
+
+<doctrine-mongo-mapping xmlns="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
+                        http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
+
+    <mapped-superclass name="Fightmaster\PublicationBundle\Model\Publication" collection="fightmaster_publication_publication">
+
+        <field name="title" fieldName="title" type="string" />
+
+        <field name="preview" fieldName="preview" type="string" />
+
+        <field name="body" fieldName="body" type="string" />
+
+        <field name="slug" fieldName="slug" type="string" />
+
+        <field name="createdAt" fieldName="created_at" type="date" />
+
+        <field name="updatedAt" fieldName="updated_at" type="date" />
+
+    </mapped-superclass>
+
+</doctrine-mongo-mapping>

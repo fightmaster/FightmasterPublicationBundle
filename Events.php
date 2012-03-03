@@ -29,7 +29,7 @@ final class Events
      *
      * @var string
      */
-    const PUBCLICATION_PRE_PERSIST = 'sarsport_publication.publication.pre_persist';
+    const PUBCLICATION_PRE_PERSIST = 'fightmaster_publication.publication.pre_persist';
 
     /**
      * The POST_PERSIST event occurs after the persistence backend
@@ -42,7 +42,33 @@ final class Events
      *
      * @var string
      */
-    const PUBLICATION_POST_PERSIST = 'sarsport_publication.publication.post_persist';
+    const PUBLICATION_POST_PERSIST = 'fightmaster_publication.publication.post_persist';
+    /**
+     * The PRE_REMOVE event occurs prior to the removing the publication.
+     *
+     * This event allows you to modify the data in the publication prior
+     * to removing occuring. The listener receives a
+     * Fightmaster\PublicationBundle\Event\PublicationRemoveEvent instance.
+     *
+     * Removing of the publication can be aborted by calling
+     * $event->abortRemove()
+     *
+     * @var string
+     */
+    const PUBCLICATION_PRE_REMOVE = 'fightmaster_publication.publication.pre_remove';
+
+    /**
+     * The POST_REOVE event occurs after the remove backend
+     * persisted the publication.
+     *
+     * This event allows you to notify users or perform other actions
+     * that might require the publication to be removed before performing
+     * those actions. The listener receives a
+     * Fightmaster\PublicationBundle\Event\PublicationEvent instance.
+     *
+     * @var string
+     */
+    const PUBLICATION_POST_REMOVE = 'fightmaster_publication.publication.post_remove';
 
     /**
      * The CREATE event occurs when the manager is asked to create
@@ -53,5 +79,5 @@ final class Events
      *
      * @var string
      */
-    const PUBLICATION_CREATE = 'sarsport_publication.publication.create';
+    const PUBLICATION_CREATE = 'fightmaster_publication.publication.create';
 }

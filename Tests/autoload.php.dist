@@ -8,31 +8,22 @@ use Symfony\Component\ClassLoader\UniversalClassLoader;
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
     'Symfony'                => array($vendorDir.'/symfony/src', $vendorDir.'/bundles'),
-    'Fightmaster'            => array($vendorDir.'/sldao/src'),
+    'Fightmaster'            => array($vendorDir.'/dao/src'),
     'Doctrine\\Common'       => $vendorDir.'/doctrine-common/lib',
     'Doctrine\\DBAL'         => $vendorDir.'/doctrine-dbal/lib',
-    'Doctrine\\ODM\\MongoDB' => $vendorDir.'/doctrine-mongodb-odm/lib',
-    'Doctrine\\MongoDB'      => $vendorDir.'/doctrine-mongodb/lib',
-    //'Doctrine\\ODM\\CouchDB' => $vendorDir.'/doctrine-couchdb/lib',
-    //'Doctrine\\CouchDB'      => $vendorDir.'/doctrine-couchdb/lib',
+    'Doctrine\\ODM\\MongodB' => $vendorDir.'/doctrine-mongodb-odm/lib',
+    'Doctrine\\MongodB'      => $vendorDir.'/doctrine-mongodb/lib',
     'Doctrine'               => $vendorDir.'/doctrine/lib',
 ));
+
+$loader->registerPrefixes(array(
+    'Twig_Extensions_' => $vendorDir.'/twig-extensions/lib',
+    'Twig_'            => $vendorDir.'/twig/lib',
+));
+
 $loader->register();
 
-//set_include_path($vendorDir.'/phing/classes'.PATH_SEPARATOR.get_include_path());
 
-/*$propelGeneratorFile = $vendorDir.'/propel/generator/lib/util/PropelQuickBuilder.php';
-$propelBehaviorFile = $vendorDir.'/propel-behavior/src/TypehintableBehavior.php';
-if (file_exists($propelGeneratorFile) && file_exists($propelBehaviorFile)) {
-    require_once $propelGeneratorFile;
-    require_once $propelBehaviorFile;
-
-    // register Propel only when the generator exists otherwise the base classes are not available
-    $propelFile = $vendorDir.'/propel/runtime/lib/Propel.php';
-    if (file_exists($propelFile)) {
-        require_once $propelFile;
-    }
-}*/
 
 spl_autoload_register(function($class) {
     if (0 === strpos($class, 'Fightmaster\\PublicationBundle\\')) {

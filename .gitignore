@@ -4,6 +4,7 @@ vendor/doctrine-common
 vendor/doctrine-dbal
 vendor/doctrine-mongodb-odm
 vendor/doctrine-mongodb
-vendor/sldao
+vendor/dao
+vendor/twig
 phpunit.xml
 Tests/autoload.php

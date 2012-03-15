@@ -29,7 +29,7 @@ final class Events
      *
      * @var string
      */
-    const PUBCLICATION_PRE_PERSIST = 'fightmaster_publication.publication.pre_persist';
+    const PUBLICATION_PRE_PERSIST = 'fightmaster_publication.publication.pre_persist';
 
     /**
      * The POST_PERSIST event occurs after the persistence backend
@@ -55,7 +55,7 @@ final class Events
      *
      * @var string
      */
-    const PUBCLICATION_PRE_REMOVE = 'fightmaster_publication.publication.pre_remove';
+    const PUBLICATION_PRE_REMOVE = 'fightmaster_publication.publication.pre_remove';
 
     /**
      * The POST_REOVE event occurs after the remove backend

@@ -81,6 +81,6 @@ class PublicationBlamerListener implements EventSubscriberInterface
 
     static public function getSubscribedEvents()
     {
-        return array(Events::PUBCLICATION_PRE_PERSIST => 'blame');
+        return array(Events::PUBLICATION_PRE_PERSIST => 'blame');
     }
 }

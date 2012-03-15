@@ -11,6 +11,9 @@ $vendorDir = __DIR__;
 $deps = array(
     array('symfony', 'git://github.com/symfony/symfony.git', isset($_SERVER['SYMFONY_VERSION']) ? $_SERVER['SYMFONY_VERSION'] : 'origin/master'),
     array('dao', 'git://github.com/fightmaster/dao.git', 'origin/master'),
+    array('security-extension', 'git://github.com/fightmaster/security-extension.git', 'origin/master'),
+    array('fos/FOS/Rest', 'git://github.com/FriendsOfSymfony/FOSRest.git', 'origin/master'),
+    array('bundles/FOS/RestBundle', 'git://github.com/FriendsOfSymfony/FOSRestBundle.git', 'origin/master'),
     array('twig', 'git://github.com/fabpot/Twig.git', 'origin/master'),
     array('doctrine-common', 'git://github.com/doctrine/common.git', 'origin/master'),
     array('doctrine-dbal', 'git://github.com/doctrine/dbal.git', 'origin/master'),

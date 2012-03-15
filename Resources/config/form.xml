@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+ This file is part of the FightmasterPublicationBundle package.
+
+ (c) Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
+
+ This source file is subject to the MIT license that is bundled
+ with this source code in the file LICENSE.
+-->
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="fightmaster_publication.form_type.publication.default" class="Fightmaster\PublicationBundle\Form\PublicationType">
+            <tag name="form.type" alias="fightmaster_publication.publication" />
+        </service>
+
+        <service id="fightmaster_publication.form_factory.publication.default" class="Fightmaster\PublicationBundle\FormFactory\publicationFormFactory" public="false">
+            <argument type="service" id="form.factory" />
+            <argument>%fightmaster_publication.form.publication.type%</argument>
+            <argument>%fightmaster_publication.form.publication.name%</argument>
+        </service>
+    </services>
+
+</container>

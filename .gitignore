@@ -5,6 +5,9 @@ vendor/doctrine-dbal
 vendor/doctrine-mongodb-odm
 vendor/doctrine-mongodb
 vendor/dao
+vendor/security-extension
+vendor/fos
+vendor/bundles
 vendor/twig
 phpunit.xml
 Tests/autoload.php

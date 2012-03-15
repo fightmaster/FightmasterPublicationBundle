@@ -15,7 +15,10 @@ namespace Fightmaster\PublicationBundle\Service;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Fightmaster\Model\Manager\ManagerInterface;
 use Fightmaster\PublicationBundle\Event\PublicationPersistEvent;
+use Fightmaster\PublicationBundle\Event\PublicationEvent;
 use Fightmaster\PublicationBundle\Exception\PublicationException;
+use Fightmaster\PublicationBundle\Model\PublicationInterface;
+use Fightmaster\PublicationBundle\Events;
 
 /**
  * @author Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
@@ -44,10 +47,10 @@ class PublicationService
      * @param $publication
      * @throws \Fightmaster\PublicationBundle\Exception\PublicationException
      */
-    public function save($publication)
+    public function save(PublicationInterface $publication)
     {
         $event = new PublicationPersistEvent($publication);
-        $this->getDispatcher()->dispatch(Events::PUBCLICATION_PRE_PERSIST, $event);
+        $this->getDispatcher()->dispatch(Events::PUBLICATION_PRE_PERSIST, $event);
 
         if ($event->isPersistenceAborted()) {
             throw PublicationException::savingAbortedByPrePersistEvent();
@@ -57,6 +60,31 @@ class PublicationService
 
         $event = new PublicationEvent($publication);
         $this->getDispatcher()->dispatch(Events::PUBLICATION_POST_PERSIST, $event);
+    }
+
+    /**
+     * Saves publication entities
+     *
+     * @param $publication
+     * @throws \Fightmaster\PublicationBundle\Exception\PublicationException
+     */
+    public function create()
+    {
+        $publication = $this->manager->create();
+        $event = new PublicationEvent($publication);
+        $this->getDispatcher()->dispatch(Events::PUBLICATION_CREATE, $event);
+
+        return $publication;
+    }
+
+    /**
+     * Returns publication
+     * @param int $id
+     * @return PublicationInterface
+     */
+    public function findPublicationById($id)
+    {
+        return $this->manager->find($id);
     }
 
     /**

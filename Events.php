@@ -58,7 +58,7 @@ final class Events
     const PUBLICATION_PRE_REMOVE = 'fightmaster_publication.publication.pre_remove';
 
     /**
-     * The POST_REOVE event occurs after the remove backend
+     * The POST_REMOVE event occurs after the remove backend
      * persisted the publication.
      *
      * This event allows you to notify users or perform other actions

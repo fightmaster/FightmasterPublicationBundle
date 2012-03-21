@@ -11,8 +11,6 @@
 
 namespace Fightmaster\PublicationBundle\Event;
 
-use Fightmaster\PublicationBundle\Model\PublicationInterface;
-
 /**
  * An event related to a removing event that can be cancelled by a listener.
  *
